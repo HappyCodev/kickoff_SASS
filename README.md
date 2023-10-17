@@ -89,6 +89,13 @@ import ‘./styles/style.css.
 
 Y Ya podremos empezar a picar nuestros estilos con SCSS en nuestro Vite.
 
+URLS DE CONSULTA:
+
+https://sass-lang.com/guide/
+
+https://codingpotions.com/sass/
+
+
 NOTA: NO hace falta el proceso watch ya que vite lo tiene por defecto por estar construido en NODE.JS
 HappyCodding.
 
