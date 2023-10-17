@@ -1,0 +1,41 @@
+.box {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+
+body {
+  font-weight: 500;
+}
+
+body ul li {
+  display: block;
+  font-size: 12px;
+  display: inline-block;
+  font-size: 22px;
+}
+body ul li a {
+  text-decoration: none;
+  color: #000;
+}
+body ul li a:hover {
+  text-decoration: none;
+  color: rgb(203, 150, 45);
+}
+
+.button-scope, .home-button, .back-button {
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.home-button, .back-button {
+  background-color: #ccc;
+}
+
+.back-button {
+  color: rgb(203, 150, 45);
+}
+
+/*# sourceMappingURL=output.css.map */

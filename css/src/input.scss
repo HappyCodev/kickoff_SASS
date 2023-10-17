@@ -1,0 +1,99 @@
+//MODULE (IMPORTACION)
+
+@use 'base';
+
+// @import 'base'; --> DEPRECATED
+
+// MIXINS
+@mixin clearfix {
+    display: inline-block;
+    font-size: 22px;
+}
+
+//MIXIN CON PARAMETROS
+@mixin border-radius ($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.box {
+    @include border-radius (20px);
+    background-color: base.$third-color;
+}
+
+// MAPS
+
+$font-weight: (
+    "light":300,
+    "normal":500,
+    "bold":700
+);
+
+body {
+    font-weight: map-get($font-weight, "normal");
+}
+
+
+//NESTING
+
+body {
+    ul {
+
+        li {
+            display: block;
+            font-size: 12px;
+            @include clearfix;
+
+            a {
+                text-decoration: none;
+                color: base.$primary-color;
+
+                &:hover {
+                    text-decoration: none;
+                    color: base.$secondary-color;
+                }
+            }
+        }
+    }
+}
+
+// EXTEND
+
+.button-scope {
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.home-button {
+    @extend .button-scope;
+    background-color: base.$third-color;
+}
+
+.back-button {
+    @extend .home-button;
+    color: base.$secondary-color;
+}
+
+// https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/tutorial-de-sass/
+
+
+
+// article [role="main"] {
+//     float: left;
+//     width: 600px / 960px * 100%;
+// }
+
+// article {
+//     background-color: #CCCCCC;
+
+//     h2 {
+//         color: #333333;
+//         margin: 10px 0;
+//     }
+
+//     body.firefox & {
+//         font-weight: normal;
+//     }
+// }
