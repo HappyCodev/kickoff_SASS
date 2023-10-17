@@ -49,8 +49,15 @@ Para poder empezar a utilizar sass tenemos que compilar el fichero .scss a css!!
 
 1.- Solo se ejecuta una vez: sass css/src/input.scss css/output.css 
 
-2.- Procedo watch ( Será el usado ) permanece a la escucha para que cada vez que salvemos se compile el fichero .css: sass --watch css/src/input.scss css/output.css
+2.- Procedo watch ( Será el usado ) permanece a la escucha para que cada vez que salvemos se compile el fichero .css: 
+
+sass --watch css/src/input.scss css/output.css
+
 Y Ya podremos empezar a picar nuestros estilos con SCSS.
+
+Al compilar nuestros fichero por defecto nos crea un .map que es el "rastreo" de la ubicación de los ficheros css, para desactivar esta opción ponemos:
+
+sass --no-source-map --watch css/src/input.scss css/output.css
 
 SASS EN SINGLE PAGE APLICATION ( REACT / ANGULAR )
 
